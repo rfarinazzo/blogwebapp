@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container col-12 col-lg-6 mt-5">
+  <h2 class="mt-5">
+    Create your blog post here
+  </h2>
+  <form action="/create" method="POST">
+    <div class="input-group input-group-lg my-4">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Post title</span>
+
+      <% if (locals.title) { %>
+        <input type="text" name="posttitle" class="form-control" aria-label="Sizing example input" value="<%= title %>" readonly aria-describedby="inputGroup-sizing-lg">
+      <% } else { %>        
+        <input type="text" name="posttitle" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <% } %>
+
+    </div>
+
+    <div class="input-group my-4">
+      <span class="input-group-text">HTML for<br>post content</span>
+
+      <% if (locals.content) { %>
+        <textarea class="form-control" name="postcontent" aria-label="With textarea"><%= content %></textarea>
+      <% } else { %>
+        <textarea class="form-control" name="postcontent" aria-label="With textarea"></textarea>
+      <% } %>
+
+    </div>
+    <div class="d-grid justify-content-end">
+
+      <% if (locals.response) { %>
+        <p class="text-end"><%= response %></p>
+      <% } %>
+
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </div>
+  </form>
+
+</div>
+
+<%- include("partials/footer.ejs") %>

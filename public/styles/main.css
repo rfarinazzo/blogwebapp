@@ -1,0 +1,8 @@
+#home-hero {
+  background: url('../images/bg_pattern.jpg') repeat fixed; 
+}
+
+input[readonly] {
+  color: #696969;
+  font-style: italic;
+}

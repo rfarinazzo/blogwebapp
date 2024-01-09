@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="text-tertiary px-4 py-2 text-center mt-5 mt-sm-0" id="home-hero">
+    <div class="py-4">
+      <h1 class="display-5 fw-bold text-white">a simple node.js blog</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-0">There's not much to say. Just testing my coding skills. For now.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-12 col-lg-6">
+    <h2 class="mt-5 mb-3"><%= title %></h2>
+      <%- content %>
+  </div>
+
+  <%- include("partials/postfooter.ejs") %>
+
+<%- include("partials/footer.ejs") %>

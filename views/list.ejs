@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container col-12 col-lg-6 mt-5">
+  <h2 class="mt-5">
+    Posts list
+  </h2>
+  <ul>
+    <% if (locals.allPosts) { %>
+      <% allPosts.forEach(element => { %>
+        <li>
+          <a href="/posts/<%= element %>">
+            <%= element %>
+          </a>
+        </li>
+      <% }); %>
+    <% } %>
+  </ul>
+  <% if (locals.response) { %>
+    <p>
+      <%= response %>
+    </p>
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

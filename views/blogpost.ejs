@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container col-12 col-lg-6 mt-5">
+  <h2>
+    <%= title %>
+  </h2>
+  <p>
+    <%- content %>
+  </p>
+</div>
+
+<div class="container col-12 col-lg-6 mt-5">
+  <a href="/edit/<%= title %>" target="_self">
+    Edit this post
+  </a>
+  <a href="/delete/<%= title %>" target="_self">
+    Delete this post
+  </a>
+</div>
+
+<%- include("partials/postfooter.ejs") %>
+
+<%- include("partials/footer.ejs") %>
